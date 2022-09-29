@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challege 2 </title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Challege 2</h1>
+
+    <h1>Simple Chat bot</h1>
+
+    <input id="chat">
+    <button id="submit">Submit</button>
+    <ul id="line"></ul>
+
+
+<script>
+    let chatInput = document.querySelector('#chat');
+    let submitButton = document.querySelector('#submit');
+    let conversation = document.querySelector('#line');
+
+    let chatting = () => {
+        let chatLine= document.createElement("li");
+        let content = chatInput.value;
+
+        conversation.innerHTML = content;
+        conversation.appendChild(chatLine);
+
+
+    }
+
+    submitButton.onclick = chatting;
+
+
+</script>
+
+</body>
+</html>
